@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.PresentationControlsDemo"
+             Title="PresentationControlsDemo">
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+
+            <BoxView BackgroundColor="DimGrey"
+                 HeightRequest="200"/>
+
+            <Label 
+            Text="MAUI !"
+            FontSize="28"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            TextColor="Black" />
+
+            <Ellipse Fill="DarkRed"
+                 Stroke="DarkGreen"
+                 StrokeThickness="10"
+                 HeightRequest="200"
+                 HorizontalOptions="Center"
+                 WidthRequest="200"/>
+
+            <Line Stroke="Black"
+              X1="0"
+              Y1="0"
+              X2="100"
+              Y2="50"
+              StrokeThickness="10"  
+              HorizontalOptions="Center"/>
+
+            <Rectangle Fill="DarkRed"
+                   Stroke="black"
+                   StrokeThickness="5"
+                   HeightRequest="50"
+                   WidthRequest="150"
+                   HorizontalOptions="End"
+                   RadiusX="10"
+                   RadiusY="10"/>
+
+            <Polygon Fill="LightBlue"
+                 Points="40,10,70,80,10,50"
+                 Stroke="DarkBlue"
+                 StrokeThickness="5"
+                 HorizontalOptions="Center"/>
+
+            <Polygon Fill="Yellow"
+                 Points="40,10,70,80,10,50"
+                 StrokeDashArray="1,1"
+                 StrokeDashOffset="6"
+                 Stroke="DarkBlue"
+                 StrokeThickness="5"
+                 HorizontalOptions="Center"/>
+
+            <Polyline Points="0,0,10,30, 15,0,18,60,23,30,35,30,40,0,43,60,48,30,100,30"
+                  Stroke="Red"
+                      HorizontalOptions="Center"/>
+
+            <Polyline Points="0 48,0 144,96,150,100,0,192,96,50,96,48,192,150 200 144 48"
+                      Fill="Blue"
+                      Stroke="Red"
+                      StrokeThickness="3"
+                      HorizontalOptions="Center"/>
+
+            <Path Aspect="Uniform"
+                  Data="M 10, 100 L 100, 100 100, 50Z"
+                  HorizontalOptions="Center"
+                  Stroke="Black"/>
+
+            <Border Stroke="#C49B33"
+                    StrokeThickness="3"
+                    Background="#2B0B98"
+                    Padding="16,8"
+                    HorizontalOptions="Center">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="40,0,0,40" />
+                </Border.StrokeShape>
+                <Label Text="Welcome To MAUI"
+                       FontSize="18"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       TextColor="White"/>
+            </Border>
+
+            <Frame Margin="5"
+                   BackgroundColor="Azure"
+                   Padding="10">
+                <Image Source="dotnet_bot.svg" 
+                   Aspect="AspectFit" />
+            </Frame>
+
+            <WebView HeightRequest="500"
+                     Source="https://sameer-topaz.vercel.app/"/>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

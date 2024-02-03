@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.TextControlsDemo"
+             Title="TextControlsDemo">
+    <StackLayout>
+
+        <!--Entry is used for text fields-->
+        <Entry Placeholder="Name"
+               PlaceholderColor="Green">
+        </Entry>
+
+        <Entry Placeholder="Password"
+               IsPassword="True"
+               Keyboard="Numeric" />
+
+        <!-- 'Textchanges' is used for monitoring the each letter/number is typed-->
+        <!-- 'Completed' is used for monitoring the entire text/numbers once it's done typing or clicked-->
+        <Entry x:Name="phoneNumber"
+                Placeholder="Phone Number"
+               Keyboard="Telephone"
+               TextChanged="Entry_TextChanged"  
+               Completed="Entry_Completed"/>
+
+        <!--The Editor will expand as per the context is typed-->
+        <Editor AutoSize="TextChanges" 
+                Placeholder="Text Editor"/>
+
+    </StackLayout>
+</ContentPage>

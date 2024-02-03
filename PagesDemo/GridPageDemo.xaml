@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.GridPageDemo"
+             Title="GridPageDemo">
+
+    <Grid RowDefinitions=".2*, .8*"
+          ColumnDefinitions=".5*, *">
+        <Button Text="Click me 1!" Grid.Row="0" Grid.Column="0" BackgroundColor="Red"></Button>
+        <Button Text="Click me 2!" Grid.Row="0" Grid.Column="1" BackgroundColor="Green"></Button>
+        <Button Clicked="PopOut" Text="Click to go Main Page!" Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="CadetBlue"></Button>
+    </Grid>
+    
+</ContentPage>

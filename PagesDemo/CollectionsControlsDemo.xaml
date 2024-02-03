@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.CollectionsControlsDemo"
+             Title="CollectionsControlsDemo">
+
+    <VerticalStackLayout Padding="10" Spacing="10" >
+        <Button x:Name="ListViewBtn"
+                Text="Go to List View"
+                Clicked="ListViewBtn_Clicked"
+                HorizontalOptions="Center"
+                WidthRequest="200"/>
+
+        <Button x:Name="CarouselViewBtn"
+                Text="Go to Carousel View"
+                Clicked="CarouselViewBtn_Clicked"
+                HorizontalOptions="Center"
+                WidthRequest="200"/>
+
+        <Button x:Name="CollectionViewBtn"
+                Text="Go to Collection View"
+                Clicked="CollectionViewBtn_Clicked" 
+                HorizontalOptions="Center"
+                WidthRequest="200"/>
+
+        <Button x:Name="PickerViewBtn"
+                Text="Go to Picker View"
+                Clicked="PickerViewBtn_Clicked" 
+                HorizontalOptions="Center"
+                WidthRequest="200"/>
+
+        <Button x:Name="TableViewBtn"
+                Text="Go to Table View"
+                Clicked="TableViewBtn_Clicked" 
+                HorizontalOptions="Center"
+                WidthRequest="200"/>
+    </VerticalStackLayout>
+
+</ContentPage>

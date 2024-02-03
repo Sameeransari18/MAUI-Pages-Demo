@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.CommandControlsDemo"
+             Title="CommandControlsDemo">
+    <ScrollView>
+        <StackLayout>
+
+            <!--Clickable alert button-->
+            <Button x:Name="btnTest" 
+                Text="Click Me!"
+                Clicked="btnTest_Clicked" Margin="0,20,0,20"/>
+
+            <!--Image will be clikable-->
+            <ImageButton Source="dotnet_bot.svg"
+                Clicked="btnTest_Clicked" />
+
+
+            <!--Changing different GroupName makes them two separate radio options-->
+            <RadioButton CheckedChanged="RadioButton_CheckedChanged"
+                     Content="Option 1" GroupName="Group1"/>
+            <RadioButton CheckedChanged="RadioButton_CheckedChanged"
+                     Content="Option 2" GroupName="Group1"/>
+            <!--Different GroupName makes them different-->
+            <RadioButton CheckedChanged="RadioButton_CheckedChanged"
+                     Content="Option 3" GroupName="Group2"/>
+            <RadioButton CheckedChanged="RadioButton_CheckedChanged"
+                     Content="Option 4" GroupName="Group2"/>
+
+            <!--Search bar-->
+            <SearchBar x:Name="searchControl"
+                   SearchButtonPressed="searchControl_SearchButtonPressed" Margin="0,0,0,10"/>
+
+            <!--SwipeView can be used to swipe leftitem or rightitem the content-->
+            <SwipeView>
+
+                <!--Main Content will be displaying and we need to swiperight to see left items or right items-->
+                <Grid BackgroundColor="LightGray"
+                      HeightRequest="60"
+                      WidthRequest="300"
+                      HorizontalOptions="FillAndExpand">
+                    <Label Text="Swipe Left or Right" 
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Grid>
+
+                <!--Left items after swipe--> 
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem BackgroundColor="LightGreen"
+                                   IconImageSource="dotnet_bot.svg"
+                                   Invoked="SwipeItem_Invoked"
+                                   Text="Favorite"/>
+
+                        <SwipeItem BackgroundColor="LightPink"
+                                   IconImageSource="dotnet_bot.svg"
+                                   Invoked="SwipeItem_Invoked"
+                                   Text="Deleted"/>
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+
+                <!--Right Items after swipe-->
+                <SwipeView.RightItems>
+                    <SwipeItems>
+                        <SwipeItem BackgroundColor="LightBlue"
+                                   IconImageSource="dotnet_bot.svg"
+                                   Invoked="SwipeItem_Invoked"
+                                   Text="Correct"/>
+
+                        <SwipeItem BackgroundColor="LightCoral"
+                                   IconImageSource="dotnet_bot.svg"
+                                   Invoked="SwipeItem_Invoked"
+                                   Text="Wrong"/>
+                    </SwipeItems>
+                </SwipeView.RightItems>
+
+            </SwipeView>
+
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

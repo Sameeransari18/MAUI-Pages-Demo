@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET MAUI Demo Pages"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Grid RowDefinitions=".5*, .5*, .5*, .5*, .5*, .5*, .5*"
+                ColumnDefinitions=".5*, .5*" RowSpacing="5" ColumnSpacing="5">
+
+                <Button
+                    x:Name="CounterBtn"
+                    Text="Click me"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnCounterClicked"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="0" 
+                    Grid.Column="0" BackgroundColor="DeepPink"/>
+
+                <Button
+                    x:Name="FlyoutPage"
+                    Text="Go to Flyout"
+                    Clicked="onFlyoutPage"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="0" 
+                    Grid.Column="1" BackgroundColor="Green" />
+
+                <Button
+                    x:Name="TabbedPage"
+                    Text="Go to Tabbed"
+                    Clicked="onTabbedPage"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="1" 
+                    Grid.Column="0" BackgroundColor="DarkBlue"/>
+
+                <Button
+                    x:Name="GridPage"
+                    Text="Go to Grid"
+                    Clicked="onGridPage"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="1" 
+                    Grid.Column="1" BackgroundColor="Chocolate"/>
+
+                <Button
+                    x:Name="AbsolutePage"
+                    Text="Go to Absolute"
+                    Clicked="onAbsolutePage"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="2" 
+                    Grid.Column="0" BackgroundColor="Firebrick"/>
+
+                <Button
+                    x:Name="FlexPage"
+                    Text="Go to Flex Page"
+                    Clicked="onFlexPage"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="2" 
+                    Grid.Column="1" BackgroundColor="MediumPurple"/>
+
+                <Label Text="CONTROLS" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       FontFamily="Roboto"
+                       Grid.Row="3"
+                       Grid.ColumnSpan="2"  
+                       BackgroundColor="Gray"/>
+
+                <Button
+                    x:Name="PresentationControl"
+                    Text="Go to Presentation Controls"
+                    Clicked="onPresentationControl"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="4" 
+                    Grid.Column="0" BackgroundColor="SaddleBrown"/>
+
+                <Button
+                    x:Name="CommandControl"
+                    Text="Go to Command Controls"
+                    Clicked="onCommandControl"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="4" 
+                    Grid.Column="1" BackgroundColor="SandyBrown"/>
+
+                <Button
+                    x:Name="InputControl"
+                    Text="Go to Input Controls"
+                    Clicked="onInputControl"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="5" 
+                    Grid.Column="0" BackgroundColor="Chartreuse"/>
+
+                <Button
+                    x:Name="TextControl"
+                    Text="Go to Text Control"
+                    Clicked="onTextControl"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="5" 
+                    Grid.Column="1" BackgroundColor="DarkGoldenrod"/>
+
+                <Button
+                    x:Name="ActivityControl"
+                    Text="Go to Activity Controls"
+                    Clicked="onActivityControl"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="6" 
+                    Grid.Column="0" BackgroundColor="DarkMagenta"/>
+                
+                <Button
+                    x:Name="CollectionsControl"
+                    Text="Go to Collections Control"
+                    Clicked="onCollectionsControl"
+                    HorizontalOptions="FillAndExpand" 
+                    Grid.Row="6" 
+                    Grid.Column="0" BackgroundColor="DarkMagenta"/>
+
+            </Grid>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

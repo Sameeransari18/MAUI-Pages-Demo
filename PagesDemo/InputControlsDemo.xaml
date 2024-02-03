@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PagesDemo.InputControlsDemo"
+             Title="InputControlsDemo">
+    <StackLayout>
+
+        <CheckBox IsChecked="True" />
+        
+        <Slider x:Name="slider"
+                Minimum="0"
+                Maximum="10"
+                MinimumTrackColor="Yellow" 
+                MaximumTrackColor="Green"
+                ThumbColor="DarkRed"
+                 ValueChanged="slider_ValueChanged"  />
+        <!--Initialed x:Name to access the label in code behind-->
+        <Label x:Name="lblSlider" />
+        <!--We can use '+' or '-' to increase or decrease the slider 'lblSlider' value-->
+        <Stepper x:Name="stepper"
+            Minimum="0"
+            Maximum="10"
+            Increment="2"
+            ValueChanged="Stepper_ValueChanged"/>
+        
+        <!--toggle - On or Off-->
+        <Switch IsToggled="True"/>
+
+        <DatePicker />
+        <TimePicker />
+
+    </StackLayout>
+</ContentPage>
